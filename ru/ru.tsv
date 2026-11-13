@@ -1,0 +1,1608 @@
+# English<TAB>Russian. {} stands for a number or name filled in at run time. \n is a line break.
+# Missing a phrase? Run the app, then: adb logcat -s ProCraftI18n  (every untranslated phrase is logged as MISS).
+Couldn't save the file	Не удалось сохранить файл
+Canvas Orientation Memory	Запоминать ориентацию холста
+An artwork opens zoomed and turned as it was left.	Работа открывается с тем масштабом и поворотом, с какими вы её оставили.
+Fit Canvas Inside Interface	Вписывать холст в интерфейс
+A fitted canvas keeps clear of the top bar and the sidebar.	Вписанный холст не заходит под верхнюю панель и боковую панель.
+Disable Time-lapse	Отключить таймлапс
+New artworks don't record their time-lapse.	Новые работы не записывают таймлапс.
+Simplified Undos	Упрощённая отмена
+Strokes made in an adjustment undo together once it is left.	Мазки, сделанные в коррекции, отменяются вместе после выхода из неё.
+Maximum Speed Distance	Максимальная дистанция скорости
+How far the pen moves before a brush's speed dynamics count it as fast.	Как далеко должно сместиться перо, чтобы динамика скорости кисти посчитала движение быстрым.
+Drag and Drop export	Экспорт перетаскиванием
+Preferred file format	Предпочитаемый формат файла
+Preferred image format	Предпочитаемый формат изображения
+Accessibility	Специальные возможности
+Single Touch Gestures Companion	Помощник жестов одним пальцем
+A floating bar of undo, redo, zoom, move and fit for one finger.	Плавающая панель отмены, повтора, масштаба, перемещения и подгонки для одного пальца.
+Color Description Notifications	Уведомления с названием цвета
+A message names the colour once it stops changing.	Сообщение называет цвет, когда он перестаёт меняться.
+Feedback Sounds	Звуки интерфейса
+Undo, redo, tools and panels click as they are used.	Отмена, повтор, инструменты и панели щёлкают при использовании.
+Tap Assistance - Initial Touch Location Support	Помощь при касании: учёт первой точки касания
+A tap lands where the finger first touched, even if it drifts before lifting.	Касание попадает туда, где палец коснулся впервые, даже если он сместился до отрыва.
+Done	Готово
+Licenses	Лицензии
+The interface font is Inter, by The Inter Project Authors, under the SIL Open Font License 1.1.	Шрифт интерфейса — Inter, авторы The Inter Project Authors, лицензия SIL Open Font License 1.1.
+The app keeps Lucide icons (lucide.dev), by Lucide Icons and Contributors, under the ISC License.	В приложении используются значки Lucide (lucide.dev), авторы Lucide Icons и участники проекта, лицензия ISC.
+‹ Settings	‹ Настройки
+Background	Фон
+Palettes	Палитры
+Colors	Цвета
+Compact	Компактно
+Cards	Карточки
+Default	По умолчанию
+More	Ещё
+Set as active	Сделать активной
+Duplicate	Дублировать
+Share	Поделиться
+Delete	Удалить
+New palette	Новая палитра
+Create new palette	Создать новую палитру
+New from camera	Новая с камеры
+No camera app is available.	Нет приложения камеры.
+New from file	Новая из файла
+New from photos	Новая из фото
+Restore example palettes	Восстановить примеры палитр
+{}°	{}°
+{}%	{}%
+Hexadecimal	Шестнадцатеричный
+History	История
+Clear	Очистить
+Color history	История цветов
+Active palette	Активная палитра
+Clear history	Очистить историю
+Disc	Круг
+Classic	Классика
+Harmony	Гармония
+Value	Значение
+Layers	Слои
+New layer	Новый слой
+set {}	набор {}
+mesh {}	сетка {}
+layer {}	слой {}
+Shared	Общая
+Locked layer selection	Выбор заблокированного слоя
+A locked layer can’t be deleted. Unlock it first.	Заблокированный слой нельзя удалить. Сначала разблокируйте его.
+Delete these layers?	Удалить эти слои?
+Undo brings them back.	Отмена вернёт их.
+Select All	Выделить всё
+Group	Группа
+Merge	Объединить
+Unlock	Разблокировать
+Lock	Заблокировать
+Locked	Заблокирован
+Open	Открыть
+Close	Закрыть
+Clipped	С обтравкой
+Assisted Reference	Опорный с помощью
+{} Reference	Опорный: {}
+Reference	Опорный
+Assisted	С помощью
+Private	Личная
+Channels	Каналы
+Color	Цвет
+Roughness	Шероховатость
+Metallic	Металличность
+Darken	Затемнение
+Shade	Тень
+Lighten	Осветление
+Subtract	Вычитание
+Divide	Деление
+Saturation	Насыщенность
+Opacity	Непрозрачность
+Max	Макс.
+Background color	Цвет фона
+Preview	Просмотр
+Max Resolution	Макс. разрешение
+Web Ready	Для веба
+Dithering	Дизеринг
+Per frame color palette	Своя палитра цветов для каждого кадра
+Transparent background	Прозрачный фон
+Export\nSettings	Параметры\nэкспорта
+Cancel	Отмена
+Export	Экспорт
+Square	Квадрат
+Animated rotate	Вращение с анимацией
+Animated swing	Качание с анимацией
+Animation duration	Длительность анимации
+Zoom distance	Расстояние масштаба
+Ease	Плавность
+Show environment	Показывать окружение
+Frames per second	Кадров в секунду
+QuickMenu	Быстрое меню
+Set Action	Назначить действие
+Adjustments	Коррекции
+Brush Set	Набор кистей
+Brushes	Кисти
+Back	Назад
+Canvas Info	О холсте
+About this artwork	Об этой работе
+Dimensions	Размеры
+Color profile	Цветовой профиль
+Video settings	Настройки видео
+Statistics	Статистика
+Import	Импорт
+Date created	Дата создания
+Date modified	Дата изменения
+{}mm	{} мм
+Pixel width	Ширина в пикселях
+{}px	{} пикс.
+Pixel height	Высота в пикселях
+Physical width	Физическая ширина
+Physical height	Физическая высота
+Maximum layers	Максимум слоёв
+Layers used	Слоёв использовано
+Layers available	Слоёв доступно
+{} of {}	{} из {}
+Assisted layers	Слоёв с помощью
+Clipping layers	Слоёв с обтравкой
+Layer masks	Слой-масок
+Layer groups	Групп слоёв
+Current color profile	Текущий цветовой профиль
+Available color profiles	Доступные цветовые профили
+Video length	Длина видео
+Video quality	Качество видео
+Video resolution	Разрешение видео
+Video file size	Размер видеофайла
+Video codec	Видеокодек
+Total strokes made	Всего мазков
+Tracked time	Затраченное время
+{}h {}m	{} ч {} мин
+Total file size	Общий размер файла
+Change color profile?	Сменить цветовой профиль?
+Its colours keep their values and look as the new profile shows them, in the time-lapse recording too.	Цвета сохранят свои значения и будут выглядеть так, как их показывает новый профиль, в том числе в записи таймлапса.
+Change	Сменить
+Don't change	Не менять
+Made by	Автор
+Author photo	Фото автора
+Add a photo	Добавить фото
+Made by 	Автор:  
+Name	Имя
+Sign here	Подпишите здесь
+Clear the signature	Очистить подпись
+ at 	 в 
+%.2f MB	%.2f МБ
+ px	 пикс.
+{} º	{} º
+{} px	{} пикс.
+Rotation	Поворот
+Angle	Угол
+Link	Связать
+Back space	Пробел
+Add	Добавить
+Remove	Убрать
+Invert	Инвертировать
+Copy & Paste	Копировать и вставить
+Feather	Растушёвка
+Save & Load	Сохранить и загрузить
+Color Fill	Заливка цветом
+X-Ray	Рентген
+Amount	Количество
+None	Нет
+Selections	Выделения
+Save new selection	Сохранить новое выделение
+Selection {}	Выделение {}
+Selection Threshold {}	Порог выделения {}
+Multiply	Умножение
+Color Burn	Затемнение основы
+Linear Burn	Линейный затемнитель
+Darker Color	Более тёмный цвет
+Normal	Обычный
+Screen	Экран
+Color Dodge	Осветление основы
+Lighter Color	Более светлый цвет
+Overlay	Перекрытие
+Soft Light	Мягкий свет
+Hard Light	Жёсткий свет
+Vivid Light	Яркий свет
+Linear Light	Линейный свет
+Pin Light	Точечный свет
+Hard Mix	Жёсткое смешение
+Difference	Разница
+Exclusion	Исключение
+Hue	Тон
+Luminosity	Яркость
+Behind	Позади
+Height	Высота
+Linear Height	Линейная высота
+Angled Brush	Скошенная кисть
+Artboard	Монтажная область
+Asterisk	Звёздочка
+Bell	Колокольчик
+Bookmark	Закладка
+Brush	Кисть
+Cactus	Кактус
+Checkmark	Галочка
+Cloud	Облако
+Controller	Геймпад
+Dart	Дротик
+Diamond	Ромб
+Dice	Кубик
+Drop	Капля
+Fan Brush	Веерная кисть
+Film Tape	Киноплёнка
+Fish	Рыба
+Flag	Флаг
+Flame	Пламя
+Flash	Вспышка
+Flower	Цветок
+Hammer	Молоток
+Headphones	Наушники
+Heart	Сердце
+Home	Дом
+Moon	Луна
+Note	Нота
+Pen	Перо
+Pin	Булавка
+Plane	Самолёт
+Puzzle	Пазл
+Rocket	Ракета
+Spark	Искра
+Star	Звезда
+Sun	Солнце
+Swoosh	Росчерк
+Sword	Меч
+Ticket	Билет
+Tree	Дерево
+Umbrella	Зонт
+Wand	Палочка
+Wizard Hat	Шляпа волшебника
+Sketching	Наброски
+Inking	Тушь
+Painting	Живопись
+Airbrushing	Аэрограф
+Charcoals	Угли
+Textures	Текстуры
+Page Assist	Помощник страниц
+Pause	Пауза
+Play	Воспроизвести
+Settings	Настройки
+New Page	Новая страница
+Add Frame	Добавить кадр
+Frame {}	Кадр {}
+Loop	Цикл
+Ping-Pong	Туда-обратно
+One Shot	Один раз
+Frames Per Second	Кадров в секунду
+Onion skin frames	Кадры калькирования
+Onion skin opacity	Прозрачность калькирования
+{} %	{} %
+Blend primary frame	Смешивать основной кадр
+Onion skin colors	Цвета калькирования
+Reset	Сбросить
+Page options	Параметры страницы
+Frame options	Параметры кадра
+Hold duration	Время удержания
+In-between	Промежуточный
+Foreground	Передний план
+ColorDrop	ЦветКапля
+Continue filling	Продолжить заливку
+Threshold {}%	Порог {}%
+Time-lapse	Таймлапс
+Nothing recorded yet	Пока ничего не записано
+The time-lapse can't be read on this device	Таймлапс невозможно прочитать на этом устройстве
+Time-lapse Replay	Просмотр таймлапса
+Gesture controls	Управление жестами
+Reset to defaults	Вернуть по умолчанию
+Reset gesture controls?	Сбросить управление жестами?
+Every gesture goes back to how the app starts out.	Все жесты вернутся к начальным настройкам приложения.
+Delay	Задержка
+Freeform	Свободная
+Uniform	Равномерная
+Distort	Искажение
+Warp	Деформация
+Advanced Mesh	Расширенная сетка
+Snapping	Привязка
+Flip Horizontal	Отразить по горизонтали
+Flip Vertical	Отразить по вертикали
+Rotate 45°	Повернуть на 45°
+Fit to Canvas	Вписать в холст
+Nearest	Ближайший
+Nearest Neighbor	Ближайший сосед
+Bilinear	Билинейная
+Bicubic	Бикубическая
+Interpolation	Интерполяция
+Magnetics	Магнетизм
+Distance	Расстояние
+Velocity	Скорость
+Gallery	Галерея
+Actions	Действия
+Selection	Выделение
+Transform	Трансформация
+Paint	Рисовать
+Smudge	Размазывание
+Erase	Ластик
+Undo	Отменить
+Redo	Повторить
+Size	Размер
+ {}%	 {}%
+Save	Сохранить
+Millimeters	Миллиметры
+Centimeters	Сантиметры
+Inches	Дюймы
+Pixels	Пиксели
+Time-lapse settings	Настройки таймлапса
+Canvas properties	Свойства холста
+Untitled Canvas	Холст без названия
+Custom Canvas	Свой холст
+Create	Создать
+Width	Ширина
+Maximum Layers	Максимум слоёв
+1920 × 1080px	1920 × 1080 пикс.
+2732 × 2048px	2732 × 2048 пикс.
+3840 × 2160px	3840 × 2160 пикс.
+Low quality	Низкое качество
+Good quality	Хорошее качество
+Studio quality	Студийное качество
+Lossless	Без потерь
+Background hidden	Фон скрыт
+Backspace	Backspace
+Next	Далее
+Cut	Вырезать
+Copy	Копировать
+Copy All	Копировать всё
+Cut & Paste	Вырезать и вставить
+Paste	Вставить
+Search	Поиск
+No results	Ничего не найдено
+Erase library	Библиотека ластиков
+Smudge library	Библиотека размазывания
+Brush library	Библиотека кистей
+Restore default brushes	Восстановить кисти по умолчанию
+Combine	Объединить
+Delete these brushes?	Удалить эти кисти?
+Create new brush	Создать новую кисть
+Create new set	Создать новый набор
+Import from Files	Импорт из Файлов
+Recent	Недавние
+Rename	Переименовать
+Customize icon	Изменить значок
+Delete this set and its brushes?	Удалить этот набор вместе с кистями?
+Find	Найти
+Unpin	Открепить
+Delete this brush?	Удалить эту кисть?
+Pinned	Закреплённые
+It can't be brought back.	Это нельзя вернуть.
+Crop and Resize	Кадрирование и размер
+Aspect lock	Блокировка пропорций
+Resample canvas	Передискретизация холста
+Canvas	Холст
+Video	Видео
+Prefs	Настройки
+Help	Справка
+There is no time-lapse to export yet.	Пока нет таймлапса для экспорта.
+Take a photo	Сделать фото
+Insert a file	Вставить файл
+Insert a private file	Вставить личный файл
+Insert a photo	Вставить фото
+Insert a private photo	Вставить личное фото
+Take a private photo	Сделать личное фото
+Add text	Добавить текст
+Copy canvas	Копировать холст
+Paste Private	Вставить в личный
+Crop & Resize	Кадрирование и размер
+Animation Assist	Помощник анимации
+Drawing Guide	Направляющая для рисования
+Edit Drawing Guide	Изменить направляющую
+Flip horizontal	Отразить по горизонтали
+Flip vertical	Отразить по вертикали
+Canvas information	Сведения о холсте
+Share Image	Поделиться изображением
+Share Layers	Поделиться слоями
+PNG Files	Файлы PNG
+Animated GIF	Анимированный GIF
+Animated PNG	Анимированный PNG
+Animated MP4	Анимированный MP4
+Animated HEVC	Анимированный HEVC
+Time-lapse Recording	Запись таймлапса
+Export time-lapse video	Экспортировать видео таймлапса
+Light interface	Светлый интерфейс
+Right-hand interface	Интерфейс для правши
+Brush scaling	Масштаб кисти
+Project canvas	Проецировать холст
+Brush cursor	Курсор кисти
+Advanced cursor settings	Расширенные настройки курсора
+Pressure and Smoothing	Нажим и сглаживание
+Plugins	Плагины
+Rapid undo delay	Задержка быстрой отмены
+Selection mask visibility	Видимость маски выделения
+Size & Opacity sidebar	Боковая панель размера и непрозрачности
+About ProCraft	О ProCraft
+Version {}	Версия {}
+Licences	Лицензии
+Keyboard shortcuts	Горячие клавиши
+Advanced settings	Расширенные настройки
+Relative to canvas	Относительно холста
+Relative to screen	Относительно экрана
+30 Seconds	30 секунд
+Full length	Полная длина
+Purge Video?	Очистить видео?
+The video recorded so far will be deleted.\nIt can't be brought back.	Записанное к этому моменту видео будет удалено.\nЭто нельзя вернуть.
+Purge	Очистить
+Don't Purge	Не очищать
+Share Model	Поделиться моделью
+Share Textures	Поделиться текстурами
+Show 2D texture	Показать 2D-текстуру
+Paint through mesh	Рисовать сквозь сетку
+Edit lighting & environment	Изменить освещение и окружение
+View in AR	Смотреть в AR
+Advanced cursor	Расширенный курсор
+Brush cursor visibility	Видимость курсора кисти
+Show while hovering	Показывать при наведении
+Show while painting	Показывать при рисовании
+Show both	Показывать всегда
+Brush outline style	Стиль контура кисти
+High contrast	Высокая контрастность
+Active color	Активный цвет
+Per brush	Для каждой кисти
+Nothing imported yet. Import a .procraft-plugin file to add one.	Пока ничего не импортировано. Импортируйте файл .procraft-plugin, чтобы добавить плагин.
+Turn off	Выключить
+Turn on	Включить
+Now a plugin	Теперь плагин
+Use the 64-bit version	Используйте 64-битную версию
+This is ProCraft's 32-bit version, for older tablets. This tablet runs the 64-bit one, which newer 	Это 32-битная версия ProCraft для старых планшетов. Этот планшет работает с 64-битной, которую требуют новые 
+Android expects: install the file ending in arm64.apk over this one, and your artworks stay.	версии Android: установите файл с окончанием arm64.apk поверх этого, и ваши работы сохранятся.
+Releases	Релизы
+Later	Позже
+Pressure & Smoothing	Нажим и сглаживание
+Stabilization	Стабилизация
+Motion Filtering	Фильтрация движения
+Motion Filtering Expression	Выражение фильтрации движения
+Tip Attachment	Привязка к кончику
+App Pressure Sensitivity	Чувствительность к нажиму в приложении
+Reset all	Сбросить всё
+Save to device	Сохранить на устройство
+Studio	Студия
+Coast	Побережье
+Auditorium	Аудитория
+City	Город
+Nightlife	Ночная жизнь
+Portside	Порт
+Industrial	Индустриальное
+Sunrise	Рассвет
+Beach	Пляж
+Mountain	Горы
+Daytime	День
+Lighting Studio	Студия освещения
+Add Light	Добавить свет
+Environment	Окружение
+Light Settings	Настройки света
+Intensity	Интенсивность
+Show Environment	Показывать окружение
+Min	Мин.
+Exposure	Экспозиция
+Show the interface	Показать интерфейс
+Layer is locked	Слой заблокирован
+Layer is hidden	Слой скрыт
+Group is empty	Группа пуста
+Mesh is hidden	Сетка скрыта
+Mesh is locked	Сетка заблокирована
+Group is hidden	Группа скрыта
+Group is selected	Группа выбрана
+Alpha Lock is on	Блокировка прозрачности включена
+“{}” can't be changed while it is locked.	«{}» нельзя изменить, пока он заблокирован.
+“{}” holds no layers to change.	В «{}» нет слоёв для изменения.
+“{}” is a group: choose one of its layers to paint on.	«{}» — это группа: выберите один из её слоёв, чтобы рисовать.
+“{}” can't be painted while it is hidden.	На «{}» нельзя рисовать, пока он скрыт.
+“{}” can't be painted while it is locked.	На «{}» нельзя рисовать, пока он заблокирован.
+“{}” can't be liquified while its alpha is locked.	«{}» нельзя исказить, пока его прозрачность заблокирована.
+Open Layers	Открыть слои
+Turn Off	Выключить
+Show	Показать
+“{}” can't be changed while 	«{}» нельзя изменить, пока 
+its layer is hidden.	его слой скрыт.
+its group is hidden.	его группа скрыта.
+a layer in it is hidden.	скрыт слой в нём.
+another layer is shown alone.	другой слой показан отдельно.
+it is hidden.	он скрыт.
+Delete shared layer?	Удалить общий слой?
+“{}” is on every mesh of this texture set.	«{}» есть на каждой сетке этого набора текстур.
+Unsupported model features	Неподдерживаемые функции модели
+Painting on this model may not go as expected because of:\n	Рисование на этой модели может работать не так, как ожидается, из-за:\n
+Zoom	Масштаб
+Move	Перемещение
+Fit Canvas	Вписать холст
+No filtering	Без фильтрации
+Classic filtering	Классическая фильтрация
+Improved filtering	Улучшенная фильтрация
+Stroke path	Траектория мазка
+Stroke properties	Свойства мазка
+Spacing	Интервал
+Spacing Jitter	Разброс интервала
+Jitter Lateral	Боковой разброс
+Jitter Linear	Продольный разброс
+Fall off	Спад
+StreamLine	Сглаживание линии
+Pressure	Нажим
+Motion filtering	Фильтрация движения
+Expression	Выражение
+Taper	Сужение
+Pressure taper	Сужение от нажима
+Tip	Кончик
+Tip animation	Анимация кончика
+Touch taper	Сужение от касания
+Taper properties	Свойства сужения
+Classic taper	Классическое сужение
+Shape	Форма
+Shape Source	Источник формы
+Input style	Стиль ввода
+Touch only	Только касание
+Azimuth	Азимут
+Azimuth and barrel roll	Азимут и вращение пера
+Relative to stroke	Относительно мазка
+Touch properties	Свойства касания
+Shape properties	Свойства формы
+Scatter	Рассеивание
+Count	Количество
+Count jitter	Разброс количества
+Randomized	Случайно
+Flip X	Отразить по X
+Flip Y	Отразить по Y
+Pressure Roundness	Округлость от нажима
+Tilt roundness	Округлость от наклона
+Roundness Vertical Jitter	Вертикальный разброс округлости
+Roundness Horizontal Jitter	Горизонтальный разброс округлости
+Shape filtering	Фильтрация формы
+Grain	Зерно
+Grain Source	Источник зерна
+Grain behavior	Поведение зерна
+Moving	Движущееся
+Texturized	Текстурное
+Movement	Движение
+Scale	Масштаб
+Depth	Глубина
+Depth minimum	Минимальная глубина
+Depth jitter	Разброс глубины
+Offset jitter	Разброс смещения
+Blend mode	Режим наложения
+Brightness	Яркость
+Contrast	Контраст
+Grain filtering	Фильтрация зерна
+3D grain behaviour	Поведение 3D-зерна
+Grain follows camera	Зерно следует за камерой
+Rendering	Отрисовка
+Rendering mode	Режим отрисовки
+Light Glaze	Лёгкая глазурь
+Uniformed Glaze	Равномерная глазурь
+Intense Glaze	Насыщенная глазурь
+Heavy Glaze	Плотная глазурь
+Uniform Blending	Равномерное смешивание
+Intense Blending	Интенсивное смешивание
+Blending	Смешивание
+Flow	Поток
+Wet edges	Влажные края
+Burnt edges	Выжженные края
+Burnt edges mode	Режим выжженных краёв
+Luminance blending	Смешивание по яркости
+Alpha Threshold	Порог прозрачности
+Threshold Amount	Величина порога
+Classic Normal Combine mode	Классический режим объединения нормалей
+Wet Mix	Влажное смешивание
+Wet mix	Влажное смешивание
+Dilution	Разбавление
+Charge	Загрузка
+Attack	Атака
+Pull	Затягивание
+Grade	Градация
+Blur	Размытие
+Blur jitter	Разброс размытия
+Wetness jitter	Разброс влажности
+Color dynamics	Динамика цвета
+Stamp color jitter	Разброс цвета штампа
+Lightness	Светлота
+Darkness	Темнота
+Secondary color	Дополнительный цвет
+Stroke color jitter	Разброс цвета мазка
+Color pressure	Цвет от нажима
+Secondary Color	Дополнительный цвет
+Color tilt	Цвет от наклона
+Color barrel roll	Цвет от вращения пера
+Dynamics	Динамика
+Speed	Скорость
+Jitter	Разброс
+Stylus	Стилус
+Bleed	Растекание
+Tilt	Наклон
+Gradation	Градация
+Size compression	Сжатие размера
+Barrel roll	Вращение пера
+Cursor outline	Контур курсора
+Hover	Наведение
+Estimated pressure	Оценочный нажим
+Hover fill	Заливка при наведении
+All	Все
+Properties	Свойства
+Brush properties	Свойства кисти
+Orient to screen	Ориентировать по экрану
+Smudge Pull	Затягивание размазывания
+Brush behavior	Поведение кисти
+Maximum size	Максимальный размер
+Minimum size	Минимальный размер
+Maximum opacity	Максимальная непрозрачность
+Minimum opacity	Минимальная непрозрачность
+Materials	Материалы
+3D Materials	3D-материалы
+Metallic Source	Источник металличности
+Roughness Source	Источник шероховатости
+Preview render	Предпросмотр отрисовки
+Preview properties	Свойства предпросмотра
+Use stamp preview	Использовать штамп для предпросмотра
+Pressure Minimum	Минимальный нажим
+Pressure Scale	Масштаб нажима
+Tilt angle	Угол наклона
+About this brush	Об этой кисти
+Uncombine these brushes?	Разъединить эти кисти?
+The pair becomes two brushes again, side by side in the set. It can't be undone.	Пара снова станет двумя кистями, рядом друг с другом в наборе. Это нельзя отменить.
+Uncombine	Разъединить
+Primary	Основная
+Combine Mode	Режим объединения
+Secondary	Вторая
+Smooth	Гладкий
+Follow stroke	Вдоль мазка
+Sharp	Острый
+Blunt	Тупой
+Stamp	Штамп
+Rolling	Прокатка
+Follow size	По размеру
+Cropped	Обрезанный
+Disabled	Отключено
+Non-Metallic	Неметаллический
+Glossy	Глянцевый
+Matte	Матовый
+Brush Studio	Студия кистей
+Drawing Pad	Планшет для рисования
+Randomise	Случайно
+Link tip sizes	Связать размеры кончиков
+New reset point?	Новая точка сброса?
+Resetting the brush will bring it back to how it is now. It can't be undone.	Сброс кисти вернёт её к текущему состоянию. Это нельзя отменить.
+Make	Создать
+Reset this brush?	Сбросить эту кисть?
+It goes back to its last reset point, or to how it came. It can't be undone.	Она вернётся к последней точке сброса или к исходному виду. Это нельзя отменить.
+Create new reset point	Создать новую точку сброса
+Reset brush	Сбросить кисть
+Last reset point: {}	Последняя точка сброса: {}
+Edit	Изменить
+Preview size	Размер предпросмотра
+3D preview	3D-предпросмотр
+Clear drawing pad	Очистить планшет для рисования
+Reset all brush settings	Сбросить все настройки кисти
+Drawing Guides	Направляющие для рисования
+Tap to create vanishing points	Коснитесь, чтобы создать точки схода
+Length	Длина
+2D Grid	2D-сетка
+Isometric	Изометрия
+Perspective	Перспектива
+Symmetry	Симметрия
+Thickness	Толщина
+Grid size	Размер сетки
+Options	Параметры
+Assisted Drawing	Рисование с помощью
+Guide Options	Параметры направляющей
+Vertical	Вертикальная
+Horizontal	Горизонтальная
+Quadrant	Квадрант
+Radial	Радиальная
+Rotational Symmetry	Вращательная симметрия
+Exporting	Экспорт
+Importing	Импорт
+Looking for lost or corrupted artworks	Поиск потерянных или повреждённых работ
+Gallery Recovery	Восстановление галереи
+Good	Хорошее
+Better	Лучше
+Best	Наилучшее
+PDF quality	Качество PDF
+Import Image	Импорт изображения
+Image	Изображение
+Rasterize this text layer?	Растрировать этот текстовый слой?
+Its text can't be edited afterwards; you can paint on it.	Его текст нельзя будет редактировать, но на нём можно рисовать.
+Rasterize	Растрировать
+Edit style	Изменить стиль
+Keyboard	Клавиатура
+Typeface	Гарнитура
+Design	Дизайн
+Font	Шрифт
+Regular	Обычный
+Style	Стиль
+Kerning	Кернинг
+Tracking	Трекинг
+Leading	Интерлиньяж
+{}pt	{} пт
+Baseline	Базовая линия
+Attributes	Атрибуты
+Underline	Подчёркивание
+Outline	Контур
+Picking color from reference	Выбор цвета с образца
+Picking color from canvas	Выбор цвета с холста
+Tap + to start a new canvas	Нажмите +, чтобы создать новый холст
+{} × {}px	{} × {} пикс.
+Opening…	Открытие…
+Delete 1 artwork?	Удалить 1 работу?
+Delete {} artworks?	Удалить работ: {}?
+This can't be undone.	Это нельзя отменить.
+Delete “{}”?	Удалить «{}»?
+Select	Выбрать
+Photo	Фото
+New canvas	Новый холст
+Stack	Стопка
+Image Format	Формат изображения
+More Options	Ещё параметры
+{} artworks	Работ: {}
+Picked	Выбрано
+Screen Size	Размер экрана
+Version {} Build {}	Версия {}, сборка {}
+Start Gallery Recovery	Начать восстановление галереи
+Cyan	Голубой
+Red	Красный
+Magenta	Пурпурный
+Green	Зелёный
+Yellow	Жёлтый
+Blue	Синий
+Shadows	Тени
+Midtones	Средние тона
+Highlights	Света
+Color Balance	Цветовой баланс
+Gamma	Гамма
+Gradient Map	Градиентная карта
+Gradient Library	Библиотека градиентов
+New gradient	Новый градиент
+Apply	Применить
+Push	Сдвиг
+Twirl Right	Вихрь вправо
+Twirl Left	Вихрь влево
+Pinch	Сжатие
+Expand	Расширение
+Crystals	Кристаллы
+Edge	Край
+Reconstruct	Восстановление
+Liquify Mode	Режим пластики
+Strength	Сила
+Adjust	Настроить
+Distortion	Искажение
+Momentum	Инерция
+Layer	Слой
+Pencil	Карандаш
+Flood	Заливка потоком
+Artifact	Артефакт
+Wave	Волна
+Signal	Сигнал
+Diverge	Расхождение
+Block Size	Размер блока
+Amplitude	Амплитуда
+Frequency	Частота
+Red shift	Сдвиг красного
+Green shift	Сдвиг зелёного
+Blue shift	Сдвиг синего
+Clouds	Облака
+Billows	Волны
+Ridges	Гребни
+Octaves	Октавы
+Turbulence	Турбулентность
+Channel	Канал
+Additive	Аддитивный
+Single	Один
+Multi	Несколько
+Transition	Переход
+Burn	Выжигание
+Full Color	Полноцветный
+Screen Print	Шелкография
+Newspaper	Газета
+Positional	Позиционный
+Directional	Направленный
+Displace	Смещение
+Transparency	Прозрачность
+Line	Линия
+Polyline	Ломаная
+Arc	Дуга
+Curve	Кривая
+Ellipse	Эллипс
+Circle	Круг
+Triangle	Треугольник
+Equilateral	Равносторонний
+Quadrilateral	Четырёхугольник
+Rectangle	Прямоугольник
+Editing	Редактирование
+Shape Editor	Редактор формы
+Grain Editor	Редактор зерна
+Metallic Editor	Редактор металличности
+Roughness Editor	Редактор шероховатости
+Auto repeat	Автоповтор
+Image source options	Параметры источника изображения
+Import a photo	Импортировать фото
+Import a file	Импортировать файл
+Source Library	Библиотека источников
+Grain scale	Масштаб зерна
+Rotate	Повернуть
+Border overlap	Перекрытие границ
+Maximal	Максимальное
+Mask hardness	Жёсткость маски
+Soft	Мягкая
+Hard	Жёсткая
+Mirror overlap	Зеркальное перекрытие
+Pyramid blending	Пирамидальное смешивание
+Search Library	Поиск по библиотеке
+Smart Pen	Умное перо
+Open Keyboard	Открыть клавиатуру
+a time-lapse's video	видео таймлапса
+a time-lapse video's frames by number	кадры видео таймлапса по номеру
+a time-lapse video's frame by time	кадр видео таймлапса по времени
+the time-lapse's videos can't be read here: their pictures stay	видео таймлапса здесь не читаются: остаются их изображения
+the time-lapse's videos hold {} frames: their pictures went	видео таймлапса содержат кадров: {}. Их изображения пропали
+Thin	Тонкий
+Light	Светлый
+Medium	Средний
+Bold	Жирный
+Black	Сверхжирный
+Italic	Курсив
+a sound couldn't be read	не удалось прочитать звук
+Complementary	Дополнительная
+Split Complementary	Расщеплённая дополнительная
+Analogous	Аналоговая
+Triadic	Триада
+Tetradic	Тетрада
+Automatic	Автоматически
+Freehand	От руки
+This file can't be read.	Этот файл не удаётся прочитать.
+This plugin couldn't be removed.	Не удалось удалить этот плагин.
+Recording	Запись
+This sound couldn't be used.	Этот звук нельзя использовать.
+This file isn't a color profile.	Этот файл не является цветовым профилем.
+Untitled Artwork	Работа без названия
+This canvas holds at most {} layers.	На этом холсте может быть не более {} слоёв.
+The plugin couldn't make this artwork.	Плагин не смог создать эту работу.
+This picture can't be opened.	Это изображение не удаётся открыть.
+A model can have four lights at most.	В модели может быть не более четырёх источников света.
+Hide Submesh	Скрыть подсетку
+Show Submesh	Показать подсетку
+Lock mesh	Заблокировать сетку
+Unlock mesh	Разблокировать сетку
+Those meshes aren't in the same texture set	Эти сетки не входят в один набор текстур
+Replace Material Map Content	Заменить содержимое карты материала
+opening a model	открытие модели
+This model can't be opened: {}.	Эту модель не удаётся открыть: {}.
+This model can't be opened.	Эту модель не удаётся открыть.
+Untitled	Без названия
+This file can't be opened.	Этот файл не удаётся открыть.
+This file has no brushes in it.	В этом файле нет кистей.
+Palette added.	Палитра добавлена.
+This palette can't be read.	Эту палитру не удаётся прочитать.
+importing a PDF	импорт PDF
+This PDF has more pages than a canvas its size can hold as layers ({}).	В этом PDF больше страниц, чем может вместить холст такого размера в виде слоёв ({}).
+This PDF can't be opened.	Этот PDF не удаётся открыть.
+importing a PSD	импорт PSD
+This file has more layers than a canvas its size can hold ({}).	В этом файле больше слоёв, чем может вместить холст такого размера ({}).
+This kind of PSD can't be opened.	Такой вид PSD не удаётся открыть.
+nothing to read	нечего читать
+copying a file in	копирование файла
+importing a package	импорт пакета
+The artwork couldn't be exported.	Не удалось экспортировать работу.
+exporting a package	экспорт пакета
+This device's graphics can't draw the canvas.	Графика этого устройства не может отрисовать холст.
+This artwork can't be opened.	Эту работу не удаётся открыть.
+no photo	нет фото
+The photo couldn't be kept.	Не удалось сохранить фото.
+The signature couldn't be kept.	Не удалось сохранить подпись.
+Layer copied	Слой скопирован
+Canvas copied	Холст скопирован
+Layer cut	Слой вырезан
+Nothing is drawn there.	Там ничего не нарисовано.
+Frames saved to timeline	Кадры сохранены на шкале времени
+a video's frames	кадры видео
+This video can't be opened.	Это видео не удаётся открыть.
+Snapped to 	Привязано к  
+a line	линии
+a polyline	ломаной
+an arc	дуге
+a curve	кривой
+an ellipse	эллипсу
+a circle	окружности
+a triangle	треугольнику
+an equilateral triangle	равностороннему треугольнику
+a quadrilateral	четырёхугольнику
+a rectangle	прямоугольнику
+a square	квадрату
+Smudging	Размазывание
+Erasing	Стирание
+ with the current brush	 текущей кистью
+exporting the time-lapse	экспорт таймлапса
+The time-lapse video couldn't be made.	Не удалось создать видео таймлапса.
+The time-lapse can't be read on this device.	Таймлапс невозможно прочитать на этом устройстве.
+Text	Текст
+Fonts imported	Шрифты импортированы
+Font imported	Шрифт импортирован
+Text rasterized	Текст растрирован
+Every brush ProCraft comes with is in the library.	Все кисти, которые идут с ProCraft, есть в библиотеке.
+1 brush is back.	Возвращена 1 кисть.
+{} brushes are back.	Возвращено кистей: {}.
+This brush couldn't be shared.	Не удалось поделиться этой кистью.
+This brush set couldn't be shared.	Не удалось поделиться этим набором кистей.
+This file is too large to import.	Этот файл слишком велик для импорта.
+This file could not be read.	Не удалось прочитать этот файл.
+Imported	Импортировано
+Brushes will be added to the library when a canvas opens.	Кисти будут добавлены в библиотеку при открытии холста.
+Brushes added to the library.	Кисти добавлены в библиотеку.
+The brush library couldn't be kept. The storage may be full.	Не удалось сохранить библиотеку кистей. Возможно, память заполнена.
+importing a picture into a source editor	импорт изображения в редактор источника
+This picture couldn't be used.	Не удалось использовать это изображение.
+pasting into a source editor	вставка в редактор источника
+There's no picture to paste.	Нет изображения для вставки.
+Previous colour	Предыдущий цвет
+The animation could not be exported.	Не удалось экспортировать анимацию.
+exporting the turntable	экспорт вращения
+exporting an animation	экспорт анимации
+The picture couldn't be exported.	Не удалось экспортировать изображение.
+The palettes couldn't be kept.	Не удалось сохранить палитры.
+This picture can't be read.	Это изображение не удаётся прочитать.
+Palette	Палитра
+sharing a palette	отправка палитры
+Adjustment applied	Коррекция применена
+Finishing the fill…	Завершение заливки…
+Advanced mesh 	Расширенная сетка  
+Snapping 	Привязка  
+Magnetics 	Магнетизм  
+An in-between goes between two frames of one layer each, with something drawn.	Промежуточный кадр помещается между двумя кадрами по одному слою, на которых что-то нарисовано.
+Lock layer	Заблокировать слой
+Unlock Layer Group	Разблокировать группу слоёв
+exporting layers	экспорт слоёв
+Layer cleared	Слой очищен
+Unlock layer	Разблокировать слой
+Lock Layer Group	Заблокировать группу слоёв
+Ungroup	Разгруппировать
+Flatten	Свести
+Fill Layer	Залить слой
+Alpha Lock	Блокировка прозрачности
+Mask	Маска
+Clipping Mask	Обтравочная маска
+Edit Text	Изменить текст
+Drawing Assist	Рисование с помощью
+Merge Down	Объединить с нижним
+Combine Down	Склеить с нижним
+Merge Mask	Объединить маску
+Page	Страница
+Frame	Кадр
+Show layer	Показать слой
+Toggle visibility	Переключить видимость
+Solo visibility	Показать только этот
+Solo visibility off	Отключить показ только этого
+Hide layer	Скрыть слой
+Solo visibility on	Показ только этого включён
+Alpha Lock on	Блокировка прозрачности включена
+Alpha Lock off	Блокировка прозрачности выключена
+Paper	Бумага
+Comic	Комикс
+Base Layer	Базовый слой
+Texture Set {}	Набор текстур {}
+Hide Texture Set	Скрыть набор текстур
+Show Texture Set	Показать набор текстур
+Lock Texture Set	Заблокировать набор текстур
+Unlock Texture Set	Разблокировать набор текстур
+Model	Модель
+Material	Материал
+Overlapping UV Coordinates	Перекрывающиеся UV-координаты
+Repeating Textures	Повторяющиеся текстуры
+Small Caps	Капитель
+Recolor	Перекрасить
+Drawing Assist on	Рисование с помощью включено
+Drawing Assist off	Рисование с помощью выключено
+Rasterize the text to transform it	Растрируйте текст, чтобы трансформировать его
+Nothing is selected on this layer	На этом слое ничего не выделено
+This layer is empty	Этот слой пуст
+There's no room left to save this artwork.	Не хватает места, чтобы сохранить эту работу.
+This artwork couldn't be saved.	Не удалось сохранить эту работу.
+The layer “{}” couldn't be read and shows empty. Its file is kept as it was.	Слой «{}» не удалось прочитать, и он показан пустым. Его файл сохранён как был.
+Page {}	Страница {}
+Ember	Угли
+Glacier	Ледник
+Moss	Мох
+Citrus	Цитрус
+Graphite	Графит
+Lagoon	Лагуна
+Gradient	Градиент
+Blank	Пустой
+This fill is too big for a plugin: it stays as it is.	Эта заливка слишком велика для плагина: она остаётся как есть.
+Text editing	Редактирование текста
+Switched off: it took too long.	Отключён: работал слишком долго.
+Switched off: it can't run on this device.	Отключён: не может работать на этом устройстве.
+This filter takes too long on a canvas this big.	Этот фильтр работает слишком долго на таком большом холсте.
+The canvas isn't ready for a filter yet.	Холст ещё не готов к фильтру.
+Untitled Palette	Палитра без названия
+Palette from image	Палитра из изображения
+White	Белый
+Light Gray	Светло-серый
+Gray	Серый
+Dark Gray	Тёмно-серый
+Red Orange	Красно-оранжевый
+Orange	Оранжевый
+Yellow Orange	Жёлто-оранжевый
+Yellow Green	Жёлто-зелёный
+Green Cyan	Зелёно-голубой
+Sky Blue	Небесно-голубой
+Violet	Фиолетовый
+Purple	Пурпурный
+Magenta Pink	Розово-пурпурный
+Pink	Розовый
+Pink Red	Розово-красный
+Grayish {}	Сероватый {}
+Dark {}	Тёмный {}
+Light {}	Светлый {}
+This isn't a ProCraft plugin.	Это не плагин ProCraft.
+This plugin is too big to import.	Этот плагин слишком велик для импорта.
+This plugin file isn't safe to open.	Этот файл плагина небезопасно открывать.
+This plugin's files don't match its list.	Файлы этого плагина не совпадают с его списком.
+This plugin file is damaged.	Этот файл плагина повреждён.
+This plugin describes itself wrongly.	Этот плагин неверно описывает себя.
+This plugin asks for permissions ProCraft doesn't give.	Этот плагин запрашивает разрешения, которые ProCraft не даёт.
+This plugin's code can't run in ProCraft.	Код этого плагина не может работать в ProCraft.
+This filter's code can't run in ProCraft.	Код этого фильтра не может работать в ProCraft.
+This plugin needs a newer ProCraft.	Этому плагину нужна более новая версия ProCraft.
+This plugin isn't for ProCraft.	Этот плагин не для ProCraft.
+A newer version of this plugin is already imported.	Более новая версия этого плагина уже импортирована.
+Another plugin already holds a setting this one needs.	Другой плагин уже занимает настройку, которая нужна этому.
+This plugin couldn't be saved.	Не удалось сохранить этот плагин.
+Hooks	Хуки
+A plugin stopped. {}	Плагин остановлен. {}
+Copy the layer	Копировать слой
+Cut the layer	Вырезать слой
+Copy the canvas	Копировать холст
+Duplicate the layer	Дублировать слой
+Clear the layer	Очистить слой
+Deselect	Снять выделение
+Tools	Инструменты
+Eyedropper: the next touch picks a colour	Пипетка: следующее касание выбирает цвет
+Hue, Saturation, Brightness	Тон, насыщенность, яркость
+Perspective guide on or off	Направляющая перспективы вкл. или выкл.
+Swap the colours	Поменять цвета местами
+Transforming: move it a pixel	Трансформация: сдвинуть на пиксель
+Transforming: move it left	Трансформация: сдвинуть влево
+Transforming: move it right	Трансформация: сдвинуть вправо
+Transforming: move it up	Трансформация: сдвинуть вверх
+Transforming: move it down	Трансформация: сдвинуть вниз
+Panels	Панели
+Colours	Цвета
+Hide or show the interface	Скрыть или показать интерфейс
+Brush size	Размер кисти
+Smaller or bigger by 1%	Меньше или больше на 1%
+Smaller by 1%	Меньше на 1%
+Bigger by 1%	Больше на 1%
+Smaller by 5%	Меньше на 5%
+Bigger by 5%	Больше на 5%
+Smaller by 10%	Меньше на 10%
+Bigger by 10%	Больше на 10%
+View	Вид
+Grey view, to check values	Серый вид для проверки тонов
+Zoom in or out	Увеличить или уменьшить
+Zoom in	Увеличить
+Zoom out	Уменьшить
+Fit the canvas	Вписать холст
+Turn the canvas 15° (with Shift, back)	Повернуть холст на 15° (с Shift — обратно)
+R and drag	R и перетаскивание
+Turn the canvas (with Shift, in 15° steps)	Повернуть холст (с Shift — шагом 15°)
+Close what is open, or set the canvas upright	Закрыть открытое или выровнять холст
+Full screen, or back to a window	Полный экран или обратно в окно
+Files	Файлы
+Open or import	Открыть или импортировать
+Save as	Сохранить как
+Space	Пробел
+Recovered Artworks	Восстановленные работы
+It can read your artwork: its size, its layers and their pixels.	Может читать вашу работу: её размер, слои и их пиксели.
+It can read and set the brush's colour, size and opacity.	Может читать и менять цвет, размер и непрозрачность кисти.
+It can show a short message.	Может показывать короткое сообщение.
+It can show a panel of its own when you tap one of its actions.	Может показывать собственную панель, когда вы нажимаете одно из его действий.
+Curves	Кривые
+Gaussian Blur	Размытие по Гауссу
+Motion Blur	Размытие в движении
+Perspective Blur	Перспективное размытие
+Noise	Шум
+Sharpen	Резкость
+Bloom	Свечение
+Glitch	Глитч
+Halftone	Полутона
+Chromatic Aberration	Хроматическая аберрация
+Liquify	Пластика
+Clone	Клон
+Plugin	Плагин
+Automatic Selection	Автоматическое выделение
+This plugin can change where your strokes land.	Этот плагин может менять место, куда попадают ваши мазки.
+This plugin can make the eyedropper read the current layer alone.	Этот плагин может заставить пипетку читать только текущий слой.
+This plugin can make the interface bigger or smaller.	Этот плагин может увеличивать или уменьшать интерфейс.
+This plugin can put what you paste into the current mask.	Этот плагин может вставлять то, что вы вставляете, в текущую маску.
+This plugin can take parts out of a ColorDrop fill.	Этот плагин может вырезать части из заливки ЦветКапли.
+This plugin can make ColorDrop fill by every layer you see.	Этот плагин может заставить ЦветКаплю заливать по всем видимым слоям.
+This plugin can change how many parts radial symmetry makes.	Этот плагин может менять число частей радиальной симметрии.
+This plugin can hide the notice undo and redo show.	Этот плагин может скрывать уведомление при отмене и повторе.
+This plugin can change the interface's colours.	Этот плагин может менять цвета интерфейса.
+This plugin can keep panels open while you paint.	Этот плагин может держать панели открытыми во время рисования.
+This plugin can change the opacity of all the layers you've picked at once.	Этот плагин может менять непрозрачность сразу всех выбранных слоёв.
+This plugin can set a brush's settings at random in the brush studio.	Этот плагин может случайно менять настройки кисти в студии кистей.
+This plugin can change how the colour panel's Classic picker looks.	Этот плагин может менять вид классического выбора цвета на панели цветов.
+This plugin can make QuickShape snap strokes to curves.	Этот плагин может заставить БыстроеФормирование привязывать мазки к кривым.
+This plugin can play a sound as you draw.	Этот плагин может воспроизводить звук во время рисования.
+This plugin can draw frames between your animation's frames.	Этот плагин может рисовать кадры между кадрами вашей анимации.
+This plugin can draw the colour panel's Classic picker its own way.	Этот плагин может по-своему рисовать классический выбор цвета на панели цветов.
+This plugin can act on your artwork each time you finish a stroke.	Этот плагин может действовать на вашу работу после каждого мазка.
+This plugin can act on your artwork each time you add a layer.	Этот плагин может действовать на вашу работу при каждом добавлении слоя.
+This plugin can change what your keyboard's keys do.	Этот плагин может менять действия клавиш клавиатуры.
+Switched off: it crashed.	Отключён: произошёл сбой.
+Switched off: it asked for too much memory.	Отключён: запросил слишком много памяти.
+Switched off: it gave an answer that makes no sense.	Отключён: дал бессмысленный ответ.
+Can't run: its files don't hold up.	Не может работать: его файлы не выдерживают проверки.
+The graphics stopped working. Go back to the gallery and open the artwork again: it comes back as last saved.	Графика перестала работать. Вернитесь в галерею и снова откройте работу: она вернётся в том виде, в каком была сохранена.
+There isn't enough graphics memory to smudge on this canvas.	Не хватает графической памяти, чтобы размазывать на этом холсте.
+The canvas couldn't be cropped, most likely for lack of graphics memory. Nothing was changed.	Не удалось обрезать холст, скорее всего из-за нехватки графической памяти. Ничего не изменилось.
+Eyedropper picks from layer	Пипетка берёт цвет со слоя
+Interface size	Размер интерфейса
+Paste into masks	Вставка в маски
+ColorDrop gap closing	Закрытие зазоров ЦветКапли
+Switched off: it stopped the graphics driver.	Отключён: остановил графический драйвер.
+This filter's files don't hold up.	Файлы этого фильтра не выдерживают проверки.
+This plugin adds a filter to Adjustments, which changes only the layer you use it on.	Этот плагин добавляет фильтр в Коррекции, который меняет только слой, к которому его применяют.
+Low	Низкое
+The time-lapse couldn't be kept. The disk may be full: replay and export leave out what wasn't kept.	Не удалось сохранить таймлапс. Возможно, диск заполнен: воспроизведение и экспорт пропустят то, что не сохранено.
+No Action	Нет действия
+Actual size	Реальный размер
+Add Text	Добавить текст
+Clear layer	Очистить слой
+Clipboard	Буфер обмена
+Delete layer	Удалить слой
+Duplicate layer	Дублировать слой
+Eyedropper	Пипетка
+Fill layer	Залить слой
+Fit canvas	Вписать холст
+Flip horizontally	Отразить по горизонтали
+Flip vertically	Отразить по вертикали
+Full screen	Полный экран
+Isometric Guide visibility	Видимость изометрической направляющей
+Layer Select	Выбор слоя
+Layer opacity	Непрозрачность слоя
+Layer visibility	Видимость слоя
+Merge down	Объединить с нижним
+Next frame	Следующий кадр
+Onion skin	Калькирование
+Open Adjustments	Открыть коррекции
+Open Color panel	Открыть панель цветов
+Open Layers panel	Открыть панель слоёв
+Perspective Guide visibility	Видимость направляющей перспективы
+Previous brush	Предыдущая кисть
+Previous color	Предыдущий цвет
+Previous frame	Предыдущий кадр
+QuickShape	БыстроеФормирование
+QuickShape stroke	Мазок БыстрогоФормирования
+Select brush	Выбрать кисть
+Select layer contents	Выбрать содержимое слоя
+Selection tool	Инструмент выделения
+Single touch move	Перемещение одним пальцем
+Single touch zoom	Масштаб одним пальцем
+Symmetry Guide visibility	Видимость направляющей симметрии
+Transform tool	Инструмент трансформации
+QuickMenu {}	Быстрое меню {}
+Customize smudge	Настроить размазывание
+Customize erase	Настроить ластик
+Customize assisted drawing	Настроить рисование с помощью
+Customize eyedropper	Настроить пипетку
+Customize QuickShape	Настроить БыстроеФормирование
+Customize QuickMenu	Настроить быстрое меню
+Full Screen	Полный экран
+Customize full screen	Настроить полный экран
+Clear Layer	Очистить слой
+Customize clear layer	Настроить очистку слоя
+Customize copy & paste	Настроить копирование и вставку
+Customize layer select	Настроить выбор слоя
+Customize hover	Настроить наведение
+General	Общие
+Tap □	Нажатие □
+Touch	Касание
+Three-finger swipe	Смахивание тремя пальцами
+Four-finger tap	Касание четырьмя пальцами
+Pen button	Кнопка пера
+Pen second button	Вторая кнопка пера
+Touch and hold	Касание с удержанием
+Scrub	Растирание
+Finger strokes smudge	Мазки пальцем размазывают
+Pen strokes smudge	Мазки пером размазывают
+Finger strokes smudge while □ is held down	Мазки пальцем размазывают, пока удерживается □
+Pen strokes smudge while □ is held down	Мазки пером размазывают, пока удерживается □
+Finger strokes erase	Мазки пальцем стирают
+Pen strokes erase	Мазки пером стирают
+Finger strokes erase while □ is held down	Мазки пальцем стирают, пока удерживается □
+Pen strokes erase while □ is held down	Мазки пером стирают, пока удерживается □
+Turns drawing assist on or off for this layer	Включает или выключает рисование с помощью для этого слоя
+Finger strokes follow the drawing guide	Мазки пальцем следуют направляющей
+Pen strokes follow the drawing guide	Мазки пером следуют направляющей
+Finger strokes follow the guide while □ is held down	Мазки пальцем следуют направляющей, пока удерживается □
+Pen strokes follow the guide while □ is held down	Мазки пером следуют направляющей, пока удерживается □
+Opens or closes the eyedropper	Открывает или закрывает пипетку
+A finger on the canvas picks a colour	Касание пальцем по холсту выбирает цвет
+A finger picks a colour while □ is held down	Палец выбирает цвет, пока удерживается □
+The pen picks a colour while □ is held down	Перо выбирает цвет, пока удерживается □
+Opens the eyedropper	Открывает пипетку
+A finger kept still on the canvas picks a colour	Неподвижный палец на холсте выбирает цвет
+Turns the last stroke into a shape	Превращает последний мазок в фигуру
+A finger touch turns the last stroke into a shape	Касание пальцем превращает последний мазок в фигуру
+Three fingers swiped down turn the last stroke into a shape	Смахивание тремя пальцами вниз превращает последний мазок в фигуру
+Four fingers tapped turn the last stroke into a shape	Касание четырьмя пальцами превращает последний мазок в фигуру
+Draw and hold	Нарисовать и удержать
+Pausing at the end of a stroke turns it into a shape	Пауза в конце мазка превращает его в фигуру
+Opens or closes the quick menu	Открывает или закрывает быстрое меню
+A finger touch opens the quick menu	Касание пальцем открывает быстрое меню
+A finger opens the quick menu while □ is held down	Палец открывает быстрое меню, пока удерживается □
+The pen opens the quick menu while □ is held down	Перо открывает быстрое меню, пока удерживается □
+Three fingers swiped down open the quick menu	Смахивание тремя пальцами вниз открывает быстрое меню
+Four fingers tapped open or close the quick menu	Касание четырьмя пальцами открывает или закрывает быстрое меню
+Opens the quick menu	Открывает быстрое меню
+A finger kept still on the canvas opens the quick menu	Неподвижный палец на холсте открывает быстрое меню
+A finger touch shows or hides the interface	Касание пальцем показывает или скрывает интерфейс
+Three fingers swiped down show or hide the interface	Смахивание тремя пальцами вниз показывает или скрывает интерфейс
+Four fingers tapped show or hide the interface	Касание четырьмя пальцами показывает или скрывает интерфейс
+Shows or hides the interface	Показывает или скрывает интерфейс
+Automatic Full Screen	Автоматический полный экран
+The interface steps aside while you paint	Интерфейс уходит в сторону, пока вы рисуете
+Rubbing three fingers back and forth clears the layer	Растирание тремя пальцами туда-сюда очищает слой
+Three fingers swiped down clear the layer	Смахивание тремя пальцами вниз очищает слой
+Four fingers tapped clear the layer	Касание четырьмя пальцами очищает слой
+Clears the layer	Очищает слой
+A finger kept still on the canvas clears the layer	Неподвижный палец на холсте очищает слой
+Opens the copy and paste menu	Открывает меню копирования и вставки
+A finger touch opens the copy and paste menu	Касание пальцем открывает меню копирования и вставки
+A finger opens the copy and paste menu while □ is held down	Палец открывает меню копирования и вставки, пока удерживается □
+The pen opens the copy and paste menu while □ is held down	Перо открывает меню копирования и вставки, пока удерживается □
+Three fingers swiped down open the copy and paste menu	Смахивание тремя пальцами вниз открывает меню копирования и вставки
+Four fingers tapped open the copy and paste menu	Касание четырьмя пальцами открывает меню копирования и вставки
+A finger kept still on the canvas opens the copy and paste menu	Неподвижный палец на холсте открывает меню копирования и вставки
+A finger touch picks the layer drawn there	Касание пальцем выбирает слой, нарисованный в этом месте
+A finger picks the layer drawn there while □ is held down	Палец выбирает слой, нарисованный в этом месте, пока удерживается □
+The pen picks the layer drawn there while □ is held down	Перо выбирает слой, нарисованный в этом месте, пока удерживается □
+Picks the layer drawn under the pen	Выбирает слой, нарисованный под пером
+A finger kept still picks the layer drawn there	Неподвижный палец выбирает слой, нарисованный в этом месте
+While the pen hovers, drag a finger for opacity and pinch for size	Пока перо над экраном, ведите пальцем для непрозрачности и сводите пальцы для размера
+Painting with a finger	Рисование пальцем
+One finger paints as the pen does	Один палец рисует так же, как перо
+Move the canvas with one finger	Перемещать холст одним пальцем
+One finger drags the canvas instead of painting; the pen still paints	Один палец двигает холст вместо рисования; перо по-прежнему рисует
+Disable undo and redo gestures	Отключить жесты отмены и повтора
+Two- and three-finger taps leave the history alone	Касания двумя и тремя пальцами не затрагивают историю
+Rotate with pinch zoom	Поворот при масштабировании щипком
+Two fingers turn the canvas as they zoom it	Два пальца поворачивают холст, пока масштабируют его
+A finger paints a model; with □ held it turns it	Палец рисует по модели; с зажатым □ вращает её
+Drawing	Рисование
+Watercolour	Акварель
+Calligraphy	Каллиграфия
+Spray Paint	Спрей
+Nature	Природа
+Effects	Эффекты
+Pixel	Пиксели
+Elements	Элементы
+Organic	Органика
+Abstract	Абстракция
+Touchups	Доработка
+Retro	Ретро
+Vintage	Винтаж
+Luminance	Яркость
+Untitled Brush	Кисть без названия
+Untitled Set	Набор без названия
+New group	Новая группа
+Layer {}	Слой {}
+Layer Mask	Маска слоя
+Round Pen	Круглое перо
+Imported Brush	Импортированная кисть
+Sizes	Размеры
+Opacities	Непрозрачности
+Basics	Основные
+Earth	Земля
+Imported Palette	Импортированная палитра
+Soft Pencil	Мягкий карандаш
+Technical Pencil	Технический карандаш
+Fine Liner	Тонкий лайнер
+Brush Pen	Кисть-перо
+Round Brush	Круглая кисть
+Flat Brush	Плоская кисть
+Bristle Brush	Щетинная кисть
+Soft Airbrush	Мягкий аэрограф
+Hard Airbrush	Жёсткий аэрограф
+Charcoal Stick	Угольная палочка
+Willow Charcoal	Ивовый уголь
+Speckles	Крапинки
+Canvas Texture	Текстура холста
+Lead Holder	Цанговый карандаш
+Coloured Pencil	Цветной карандаш
+Sketch Pen	Перо для набросков
+Dip Pen	Перо с чернилами
+Marker	Маркер
+Dry Ink	Сухая тушь
+Dry Brush	Сухая кисть
+Gouache	Гуашь
+Oil Paint	Масло
+Palette Knife	Мастихин
+Medium Airbrush	Средний аэрограф
+Fine Mist	Тонкая дымка
+Flat Airbrush	Плоский аэрограф
+Compressed Charcoal	Прессованный уголь
+Vine Charcoal	Виноградный уголь
+Charcoal Dust	Угольная пыль
+Dot Screen	Растр
+Crosshatch	Перекрёстная штриховка
+Rough Wall	Шероховатая стена
+Grit	Зернистость
+Stipple	Пунктир точками
+Chalk	Мел
+Soft Pastel	Мягкая пастель
+Oil Pastel	Масляная пастель
+Wax Crayon	Восковой мелок
+Conté	Конте
+Wet Wash	Влажная заливка
+Round Wash	Круглая заливка
+Granulating Wash	Зернистая заливка
+Blot	Клякса
+Bleeding Wash	Растекающаяся заливка
+Chisel Nib	Плоское перо
+Ribbon	Лента
+Script Brush	Кисть для письма
+Monoline	Монолиния
+Pointed Nib	Остроконечное перо
+Spray Can	Баллончик
+Fat Cap	Толстая насадка
+Flick	Щелчок
+Mist	Туман
+Leaves	Листья
+Grass	Трава
+Bark	Кора
+Foliage	Листва
+Sparkle	Блеск
+Bokeh	Боке
+Smoke	Дым
+Snow	Снег
+Light Trail	Световой след
+Glow	Свечение
+Dither	Дизеринг
+Hatching Pen	Перо для штриховки
+HB Pencil	Карандаш HB
+Graphite Stick	Графитовый стержень
+Charcoal Pencil	Угольный карандаш
+Shading Pencil	Карандаш для тушёвки
+Ballpoint	Шариковая ручка
+Studio Ink	Студийная тушь
+Gel Pen	Гелевая ручка
+Thick Liner	Толстый лайнер
+Felt Tip	Фломастер
+Rough Ink	Грубая тушь
+Ink Bleed	Растекающаяся тушь
+Filbert	Филберт
+Rigger	Ригер
+Sable	Колонок
+Impasto	Импасто
+Acrylic	Акрил
+Tempera	Темпера
+Scumble	Сухой мазок
+Grainy Airbrush	Зернистый аэрограф
+Stipple Airbrush	Точечный аэрограф
+Feather Airbrush	Перистый аэрограф
+Tight Airbrush	Узкий аэрограф
+Charcoal Block	Угольный брусок
+Burnt Stick	Обугленная палочка
+Smudged Charcoal	Растушёванный уголь
+Soft Charcoal	Мягкий уголь
+Wood Grain	Древесные волокна
+Brickwork	Кирпичная кладка
+Fish Scales	Рыбья чешуя
+Cell Wall	Клеточная стенка
+Marble	Мрамор
+Pinstripe	Тонкая полоска
+Honeycomb	Соты
+Leather	Кожа
+Sandpaper	Наждачная бумага
+Checkerboard	Шахматная доска
+Hard Pastel	Твёрдая пастель
+Chalk Pencil	Меловой карандаш
+Pastel Pencil	Пастельный карандаш
+Litho Crayon	Литографский мелок
+Flat Wash	Плоская заливка
+Dry Wash	Сухая заливка
+Salt	Соль
+Splash	Брызги
+Mop Brush	Кисть-швабра
+Broad Pen	Широкое перо
+Italic Nib	Курсивное перо
+Felt Brush	Войлочная кисть
+Copperplate	Медная гравюра
+Drips	Подтёки
+Hard Spray	Жёсткий спрей
+Splatter Can	Баллончик с брызгами
+Skinny Cap	Узкая насадка
+Pine	Сосна
+Twigs	Веточки
+Flowers	Цветы
+Fur	Мех
+Pebbles	Камешки
+Feathers	Перья
+Reeds	Тростник
+Stars	Звёзды
+Bubbles	Пузыри
+Embers	Тлеющие угли
+Rain	Дождь
+Snowflakes	Снежинки
+Pixel Checker	Пиксельная шахматка
+Pixel Spray	Пиксельный спрей
+Pixel Round	Пиксельный круг
+Pixel Line	Пиксельная линия
+Fire	Огонь
+Smoke Puff	Клуб дыма
+Water Drops	Капли воды
+Ripples	Рябь
+Lightning	Молния
+Ice	Лёд
+Sea Foam	Морская пена
+Fog	Туман
+Rusted	Ржавчина
+Cement	Цемент
+Grunge	Гранж
+Scratched Metal	Поцарапанный металл
+Steel Wool	Стальная вата
+Rivets	Заклёпки
+Grime	Грязь
+Oil Stain	Масляное пятно
+Hair	Волосы
+Skin Pores	Поры кожи
+Freckles	Веснушки
+Reptile	Рептилия
+Coral	Коралл
+Lichen	Лишайник
+Seeds	Семена
+Veins	Прожилки
+Hearts	Сердечки
+Confetti	Конфетти
+Triangles	Треугольники
+Diamonds	Ромбы
+Speed Lines	Линии скорости
+Scribbles	Каракули
+Dot Trail	Точечный след
+Dashes	Штрихи
+Soft Blender	Мягкий блендер
+Grainy Blender	Зернистый блендер
+Retouch	Ретушь
+Highlight	Блик
+Shadow	Тень
+Fine Detail	Мелкие детали
+Ben Day	Растр Бен-Дэй
+Screen Tone	Скринтон
+Comic Ink	Комикс-тушь
+Retro Stipple	Ретро-пунктир
+Pop Dots	Поп-точки
+Retro Lines	Ретро-линии
+Offset Print	Офсетная печать
+Worn Ink	Потёртая тушь
+Letterpress	Высокая печать
+Old Paper	Старая бумага
+Sepia Wash	Сепия
+Scratchy Pen	Скрипучее перо
+Rubber Stamp	Резиновый штамп
+Faded Print	Выцветший оттиск
+Neon	Неон
+Glimmer	Мерцание
+Lens Dust	Пыль на объективе
+Flare	Блик объектива
+Halo	Ореол
+Light Leak	Засветка
+Aurora	Северное сияние
+Fairy Dust	Волшебная пыль
+Soft Glow	Мягкое свечение
+Overlay Light	Световое наложение
+Brush {}	Кисть {}
+Soft round	Мягкий круг
+Grainy disc	Зернистый диск
+Chunk	Глыба
+Bristles	Щетина
+Splatter	Брызги
+Flat	Плоская
+Pastel	Пастель
+Leaf	Лист
+Dry	Сухая
+Ring	Кольцо
+Spray	Спрей
+Hatch	Штриховка
+Wisp	Прядь
+Droplet	Капелька
+Bubble	Пузырёк
+Stone	Камень
+Streak	Полоса
+Twig	Прутик
+Crack	Трещина
+Sponge	Губка
+Needles	Иглы
+Snowflake	Снежинка
+Scribble	Каракуля
+Drip	Капля
+Bolt	Молния
+Block	Блок
+Grainy dot	Зернистая точка
+Small chunk	Маленькая глыба
+Small pastel	Маленькая пастель
+Solid dab	Сплошной мазок
+Slim oval	Узкий овал
+Ultra soft round	Сверхмягкий круг
+Stock blot	Стандартная клякса
+Hook	Крючок
+Grainy square	Зернистый квадрат
+Flat stroke	Плоский мазок
+Dots	Точки
+Square dots	Квадратные точки
+Mess	Беспорядок
+Coarse	Грубая
+Weave	Плетение
+Fibre	Волокно
+Linen	Лён
+Wash	Заливка
+Concrete	Бетон
+Hatching	Штриховка
+Crumpled	Смятая
+Wood	Дерево
+Brick	Кирпич
+Scales	Чешуя
+Cells	Клетки
+Stripes	Полосы
+Sand	Песок
+Hexagons	Шестиугольники
+Caustics	Каустика
+Scratches	Царапины
+Checker	Шахматка
+Speckle	Крапинка
+Twill	Саржа
+Rust	Ржавчина
+Recycled	Переработанная
+Paper sheet	Лист бумаги
+Worn paper	Потёртая бумага
+Charcoal	Уголь
+Fine noise	Мелкий шум
+Speckled	Крапчатая
+Mottled	Пятнистая
+Rough canvas	Грубый холст
+Sprayed	Распылённая
+Dry patches	Сухие пятна
+Graph paper	Миллиметровка
+Dot grid	Точечная сетка
+Dotted star	Точечная звезда
+Diagonal stripes	Диагональные полосы
+Fine grid	Мелкая сетка
+Soft dots	Мягкие точки
+Labyrinth	Лабиринт
+That key stays as it is: {}.	Эта клавиша остаётся без изменений: {}.
+There are no shortcuts to change.	Нет сочетаний клавиш, которые можно изменить.
+Shortcuts	Горячие клавиши
+Press the new keys. Escape goes back.	Нажмите новые клавиши. Escape — назад.
+Now	Сейчас
+As it came	Как было
+No keys	Нет клавиш
+Every shortcut is as it came.	Все сочетания остались как были.
+Taken from {}.	Взято из {}.
+There's no room for another layer.	Нет места для ещё одного слоя.
+Grid	Сетка
+Made by {}	Автор: {}
+Painting with the current brush	Рисование текущей кистью
+Smudging with the current brush	Размазывание текущей кистью
+Erasing with the current brush	Стирание текущей кистью
+This is ProCraft's 32-bit version, for older tablets. This tablet runs the 64-bit one, which newer Android expects: install the file ending in arm64.apk over this one, and your artworks stay.	Это 32-битная версия ProCraft для старых планшетов. Этот планшет работает с 64-битной, которую требуют новые версии Android: установите файл, оканчивающийся на arm64.apk, поверх этого, и ваши работы сохранятся.
+“{}” can't be changed while its layer is hidden.	«{}» нельзя изменить, пока скрыт его слой.
+“{}” can't be changed while its group is hidden.	«{}» нельзя изменить, пока скрыта его группа.
+“{}” can't be changed while a layer in it is hidden.	«{}» нельзя изменить, пока скрыт слой в нём.
+“{}” can't be changed while another layer is shown alone.	«{}» нельзя изменить, пока другой слой показан отдельно.
+“{}” can't be changed while it is hidden.	«{}» нельзя изменить, пока он скрыт.
+Painting on this model may not go as expected because of:\n{}	Рисование на этой модели может работать не так, как ожидается, из-за:\n{}
+Snapped to a line	Привязано к линии
+Snapped to a polyline	Привязано к ломаной
+Snapped to an arc	Привязано к дуге
+Snapped to a curve	Привязано к кривой
+Snapped to an ellipse	Привязано к эллипсу
+Snapped to a circle	Привязано к окружности
+Snapped to a triangle	Привязано к треугольнику
+Snapped to an equilateral triangle	Привязано к равностороннему треугольнику
+Snapped to a quadrilateral	Привязано к четырёхугольнику
+Snapped to a rectangle	Привязано к прямоугольнику
+Snapped to a square	Привязано к квадрату
+{} KB	{} КБ
+{} MB	{} МБ
+{} GB	{} ГБ
+Delete {} layers?	Удалить слои ({})?
+Group {}	Группа {}
+1.3 MB	1,3 МБ
+850 KB	850 КБ
+Esc	Esc

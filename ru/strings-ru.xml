@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProCraft</string>
+    <string name="widget_recent_name">Недавняя работа</string>
+    <string name="widget_recent_description">Открывает ProCraft на работе, с которой вы работали последней.</string>
+</resources>
