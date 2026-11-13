@@ -1,0 +1,77 @@
+name: Build Russian APK
+
+# Actions > Build Russian APK > Run workflow.
+# Applies the Russian interface (the ru/ folder) to this checkout, builds the app for 32-bit and
+# 64-bit ARM and publishes the APKs in the release "ru-latest" (and as the run's artifacts).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  RUST_VERSION: "1.99.0"
+  NDK_VERSION: "29.0.14206865"
+
+jobs:
+  apk:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - abi: armeabi-v7a
+            name: arm32
+          - abi: arm64-v8a
+            name: arm64
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply the Russian interface
+        run: python3 ru/apply.py
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ env.RUST_VERSION }}
+          targets: aarch64-linux-android, armv7-linux-androideabi
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.abi }}
+      - name: cargo-ndk
+        run: cargo install cargo-ndk --version "^4" --locked
+      - name: NDK
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;$NDK_VERSION" > /dev/null
+          echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/$NDK_VERSION" >> "$GITHUB_ENV"
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Release APK
+        working-directory: android
+        run: ./gradlew --no-daemon :app:assembleRelease -Pprocraft.abis=${{ matrix.abi }}
+      - name: Name the APK
+        run: |
+          mkdir -p out
+          cp android/app/build/outputs/apk/release/*.apk "out/procraft-ru-${{ matrix.name }}.apk"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: procraft-ru-${{ matrix.name }}
+          path: out/*.apk
+
+  publish:
+    needs: apk
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dl
+          merge-multiple: true
+      - name: Release ru-latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release delete ru-latest --yes --cleanup-tag || true
+          gh release create ru-latest dl/*.apk --prerelease \
+            --title "ProCraft (русский)" \
+            --notes "Сборка с русским интерфейсом. Для 32-битных планшетов и телефонов: procraft-ru-arm32.apk."
