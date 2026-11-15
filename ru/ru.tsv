@@ -1606,3 +1606,35 @@ Group {}	Группа {}
 1.3 MB	1,3 МБ
 850 KB	850 КБ
 Esc	Esc
+Back to libraries	К библиотекам
+Brush libraries	Библиотеки кистей
+Restore default library	Восстановить библиотеку по умолчанию
+Create new library	Создать новую библиотеку
+This library has no brushes yet	В этой библиотеке пока нет кистей
+Make a set with +, then brushes in it, or bring brushes in from your files.	Создайте набор кнопкой +, затем кисти в нём, или импортируйте кисти из файлов.
+Delete this library?	Удалить эту библиотеку?
+Its sets and brushes go with it.	Её наборы и кисти будут удалены вместе с ней.
+Layer rasterized	Слой растрирован
+This library can't be opened.	Эту библиотеку не удаётся открыть.
+The library couldn't be renamed.	Не удалось переименовать библиотеку.
+A new library couldn't be made.	Не удалось создать новую библиотеку.
+The library couldn't be copied.	Не удалось скопировать библиотеку.
+The library couldn't be deleted.	Не удалось удалить библиотеку.
+The library couldn't be put back.	Не удалось вернуть библиотеку.
+This library couldn't be shared.	Не удалось поделиться этой библиотекой.
+This library couldn't be added.	Не удалось добавить эту библиотеку.
+A brush file couldn't be read.	Не удалось прочитать файл кисти.
+Recolour	Перекрасить
+Apply Brush	Применить кисть
+Rasterize the layer to transform it	Растрируйте слой, чтобы трансформировать его
+Erase stroke	Стирание мазка
+Smudge stroke	Размазывание мазка
+Paint stroke	Мазок кистью
+Redraw layer	Перерисовать слой
+Delete strokes	Удалить мазки
+Move strokes	Переместить мазки
+Restyle strokes	Изменить стиль мазков
+Smooth strokes	Сгладить мазки
+This plugin can add kinds of layer whose strokes it keeps, and draw them again.	Этот плагин может добавлять виды слоёв, мазки которых он хранит и перерисовывает.
+Pen strokes erase while the pen button is held down	Мазки пером стирают, пока удерживается кнопка пера
+Untitled library	Библиотека без названия
