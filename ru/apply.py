@@ -155,6 +155,149 @@ def animation_bar():
 
 animation_bar()
 
+# 6. Frame options: Clear Frame, First Frame and Last Frame.
+def frame_options():
+    vm_path = f"{PKG}/canvas/CanvasViewModel.kt"
+    ui_path = f"{PKG}/ui/AnimationUi.kt"
+    if not (os.path.exists(vm_path) and os.path.exists(ui_path)):
+        warn.append("Frame options: files not found"); return
+    vm, ui = read(vm_path), read(ui_path)
+    doc = "    /** Animation Assist's next or previous frame drawn on"
+    anchor = "        // a plugin's in-betweens: a frame drawn between this one and the next\n"
+    if not (doc in vm and anchor in ui and "fun clearCurrentLayer()" in vm and "barFirstFrame" not in vm):
+        warn.append("Frame options: the code looks different, rows not added"); return
+    funcs = """    /** The first and the last frame of the animation. */
+    fun barFirstFrame() = stepFrame(-1_000_000)
+
+    fun barLastFrame() = stepFrame(1_000_000)
+
+"""
+    vm = vm.replace(doc, funcs + doc, 1)
+    def row(label, call):
+        return ("        RowLine()\n"
+                "        Row(Modifier.fillMaxWidth().height(44.dp).clickable { " + call + " }.padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n"
+                "            Text(\"" + label + "\", color = Pc.PanelTitle, fontSize = 17.sp)\n"
+                "        }\n")
+    rows = ("        if (!a.pages) {\n"
+            + row("Clear Frame", "vm.clearCurrentLayer()")
+            + row("First Frame", "vm.barFirstFrame()")
+            + row("Last Frame", "vm.barLastFrame()")
+            + "        }\n")
+    ui = ui.replace(anchor, rows + anchor, 1)
+    write(vm_path, vm); write(ui_path, ui)
+    print("Frame options rows added")
+
+frame_options()
+
+# 7. Frames made of several layers. In Animation Assist each top-level layer or group is a frame;
+#    a layer added inside a group is not. "Add Layer" (frame options) puts a new layer inside the
+#    current frame (a frame that is a single layer is made a group first), and "Frames hold layers"
+#    (settings) makes Add Frame start a group, so layers can be added into it right away.
+def frames_with_layers():
+    vm_path = f"{PKG}/canvas/CanvasViewModel.kt"
+    ui_path = f"{PKG}/ui/AnimationUi.kt"
+    if not (os.path.exists(vm_path) and os.path.exists(ui_path)):
+        warn.append("Frames with layers: files not found"); return
+    vm, ui = read(vm_path), read(ui_path)
+    old_add = "        layerChange { if (it.addFrame() == 0uL) message = noRoom() }\n"
+    head = "    fun addFrame() {\n"
+    toggle = '        ToggleRow("Blend primary frame", a.blendPrimary, 44.5.dp) { vm.changeAnimation { it.copy(blendPrimary = !it.blendPrimary) } }\n        RowLine()\n'
+    anchor = "        // a plugin's in-betweens: a frame drawn between this one and the next\n"
+    if not (old_add in vm and head in vm and toggle in ui and anchor in ui and "framesAsGroups" not in vm):
+        warn.append("Frames with layers: the code looks different, nothing added"); return
+    new_add = """        layerChange {
+            val id = it.addFrame()
+            if (id == 0uL) {
+                message = noRoom()
+            } else if (framesAsGroups && animation?.pages != true) {
+                // the new frame becomes a group, so layers can be added inside it
+                it.selectLayer(id)
+                it.groupPicked()
+            }
+            Unit
+        }
+"""
+    vm = vm.replace(old_add, new_add, 1)
+    funcs = """    /** New frames start as groups, so a frame can hold several layers. */
+    var framesAsGroups by mutableStateOf(true)
+
+    /**
+     * Another layer drawn in the current frame, which stays one frame: a frame that is a single
+     * layer is put in a group first, and the new layer goes inside the group.
+     */
+    fun addLayerToFrame() {
+        frameOptionsOpen = false
+        stopPlaying()
+        val s = session ?: return
+        val frame = currentFrameLayer() ?: return
+        val inside: ULong? = when (frame.kind) {
+            LayerType.GROUP -> layers.firstOrNull { it.parent == frame.id && it.kind != LayerType.MASK }?.id
+            LayerType.PAINT -> {
+                s.selectLayer(frame.id)
+                if (s.groupPicked() == 0uL) null else frame.id
+            }
+            else -> null
+        }
+        if (inside == null) return
+        refresh()
+        selectLayer(inside)
+        addLayer()
+    }
+
+"""
+    vm = vm.replace(head, funcs + head, 1)
+    ui = ui.replace(toggle, toggle + '        ToggleRow("Frames hold layers", vm.framesAsGroups, 44.5.dp) { vm.framesAsGroups = !vm.framesAsGroups }\n        RowLine()\n', 1)
+    row = ("        if (!a.pages) {\n        RowLine()\n"
+           "        Row(Modifier.fillMaxWidth().height(44.dp).clickable { vm.addLayerToFrame() }.padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n"
+           "            Text(\"Add Layer to Frame\", color = Pc.PanelTitle, fontSize = 17.sp)\n"
+           "        }\n        }\n")
+    ui = ui.replace(anchor, row + anchor, 1)
+    write(vm_path, vm); write(ui_path, ui)
+    print("Frames with layers added")
+
+frames_with_layers()
+
+# 8. The app's name, its own package id (so it installs beside the original ProCraft), and a
+#    language button (RU / EN) in the gallery's header.
+def branding_and_language():
+    gradle = "android/app/build.gradle.kts"
+    if os.path.exists(gradle):
+        g = read(gradle)
+        old = 'applicationId = "io.github.artcraftandroid.procraft"'
+        if old in g:
+            write(gradle, g.replace(old, 'applicationId = "io.github.artcraftandroid.studio"', 1))
+        else:
+            warn.append("applicationId not found: the app keeps ProCraft's id")
+    strings = f"{MAIN}/res/values/strings.xml"
+    if os.path.exists(strings):
+        write(strings, read(strings).replace("ProCraft", "Procreate Android"))
+    gp = f"{PKG}/ui/GalleryScreen.kt"
+    if not os.path.exists(gp):
+        warn.append("Language button: GalleryScreen.kt not found"); return
+    g = read(gp)
+    anchor = ("        Row(Modifier.align(Alignment.TopEnd).padding(top = 10.dp, end = 20.dp), verticalAlignment = Alignment.CenterVertically) {\n"
+              "            Row(\n")
+    if g.count(anchor) != 1:
+        warn.append("Language button: the gallery header looks different, button not added"); return
+    button = (
+        "        val languageContext = androidx.compose.ui.platform.LocalContext.current\n"
+        "        Row(Modifier.align(Alignment.TopEnd).padding(top = 10.dp, end = 20.dp), verticalAlignment = Alignment.CenterVertically) {\n"
+        "            Box(\n"
+        "                Modifier.padding(end = 12.dp).size(52.dp, 45.dp).clip(CircleShape).background(Pc.Capsule).border(1.dp, Pc.CapsuleEdge, CircleShape)\n"
+        "                    .clickable { io.github.artcraftandroid.procraft.i18n.I18n.toggle(languageContext) },\n"
+        "                contentAlignment = Alignment.Center,\n"
+        "            ) {\n"
+        "                androidx.compose.material3.Text(\n"
+        "                    if (io.github.artcraftandroid.procraft.i18n.I18n.isRussian) \"RU\" else \"EN\",\n"
+        "                    color = Pc.GalleryText, fontSize = 16.sp, fontWeight = FontWeight.Bold,\n"
+        "                )\n"
+        "            }\n"
+        "            Row(\n")
+    write(gp, g.replace(anchor, button, 1))
+    print("Branding and language button added")
+
+branding_and_language()
+
 for w in warn: print("WARNING:", w)
 print("done")
 sys.exit(0)
