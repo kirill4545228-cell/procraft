@@ -66,7 +66,7 @@ impl State {
 
     /// Joins `shape` to the selection; `record` makes it an undo step (otherwise it is only shown,
     /// as while a colour threshold is dragged).
-    fn join(&mut self, shape: Mask, how: SelectionJoin, record: bool) {
+    pub(crate) fn join(&mut self, shape: Mask, how: SelectionJoin, record: bool) {
         self.feather_base = None;
         let before = self.selection.clone();
         match (self.selection.as_mut(), how) {
@@ -347,7 +347,7 @@ impl CanvasSession {
         let mut guard = self.shared.lock();
         let st = &mut *guard;
         let current = st.doc.current();
-        if st.doc.layer(current).is_none() || st.doc.is_locked(current) {
+        if st.doc.layer(current).is_none_or(|l| l.plugin.is_some()) || st.doc.is_locked(current) {
             return;
         }
         let Some(mask) = st.selection.clone() else { return };
