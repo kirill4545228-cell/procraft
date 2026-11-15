@@ -1,8 +1,8 @@
-name: Build Russian APK
+name: Build Procreate Android APK
 
 # Actions > Build Russian APK > Run workflow.
 # Applies the Russian interface (the ru/ folder) to this checkout, builds the app for 32-bit and
-# 64-bit ARM and publishes the APKs in the release "ru-latest" (and as the run's artifacts).
+# 64-bit ARM and publishes the APKs in the release "latest" (and as the run's artifacts).
 on:
   workflow_dispatch:
 
@@ -52,10 +52,10 @@ jobs:
       - name: Name the APK
         run: |
           mkdir -p out
-          cp android/app/build/outputs/apk/release/*.apk "out/procraft-ru-${{ matrix.name }}.apk"
+          cp android/app/build/outputs/apk/release/*.apk "out/procreate-android-${{ matrix.name }}.apk"
       - uses: actions/upload-artifact@v4
         with:
-          name: procraft-ru-${{ matrix.name }}
+          name: procreate-android-${{ matrix.name }}
           path: out/*.apk
 
   publish:
@@ -66,12 +66,12 @@ jobs:
         with:
           path: dl
           merge-multiple: true
-      - name: Release ru-latest
+      - name: Release latest
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh release delete ru-latest --yes --cleanup-tag || true
-          gh release create ru-latest dl/*.apk --prerelease \
-            --title "ProCraft (русский)" \
-            --notes "Сборка с русским интерфейсом. Для 32-битных планшетов и телефонов: procraft-ru-arm32.apk."
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest dl/*.apk --prerelease \
+            --title "Procreate Android" \
+            --notes "Сборка с русским интерфейсом. Для 32-битных планшетов и телефонов: procreate-android-arm32.apk."
