@@ -27,7 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Apply the Russian interface
-        run: python3 ru/apply.py
+        run: |
+          python3 -m pip install --break-system-packages pillow
+          python3 ru/apply.py
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
