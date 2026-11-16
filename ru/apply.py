@@ -400,6 +400,73 @@ def carry():
 
 carry()
 
+# 12. Auto In-betweens: with the Tweening plugin on, one tap draws several evenly spaced frames between
+#     a frame and the next (the plugin's In-between, called one after another with the slider set so
+#     the frames fall at 1/(n+1), 2/(n+1) ... of the way). The frames need one layer each.
+def auto_inbetweens():
+    vm_path = f"{PKG}/canvas/CanvasViewModel.kt"
+    ui_path = f"{PKG}/ui/AnimationUi.kt"
+    if not (os.path.exists(vm_path) and os.path.exists(ui_path)):
+        warn.append("Auto in-betweens: files not found"); return
+    vm, ui = read(vm_path), read(ui_path)
+    doc = "    /** A plugin's In-between: a frame drawn between this frame and the next by the plugin (off the main thread: it takes a moment), made current. */\n"
+    row = ('            Row(Modifier.fillMaxWidth().height(44.dp).clickable { vm.addInbetween() }.padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n'
+           '                Text("In-between", color = Pc.PanelTitle, fontSize = 17.sp)\n'
+           '            }\n')
+    if not (doc in vm and row in ui and "autoInbetweens" not in vm and "val pluginList" not in "" and "pluginList" in vm):
+        warn.append("Auto in-betweens: the code looks different, nothing added"); return
+    funcs = """    /** How many frames Auto In-betweens draws between a frame and the next. */
+    var autoInbetweens by androidx.compose.runtime.mutableIntStateOf(3)
+
+    /**
+     * Auto In-betweens: [autoInbetweens] frames between this frame and the next, evenly spaced. The
+     * Tweening plugin draws each (its "Nearer the next frame" slider set to what the spacing needs,
+     * then put back), one after another, each between the last one made and the next frame.
+     */
+    fun addAutoInbetweens() {
+        frameOptionsOpen = false
+        stopPlaying()
+        val layer = currentFrameLayer() ?: return
+        val s = session ?: return
+        val count = autoInbetweens.coerceIn(1, 8)
+        val near = pluginList.firstOrNull { it.id == "io.github.artcraftandroid.tweening" && it.on }
+            ?.controls
+            ?.firstNotNullOfOrNull { (it as? io.github.artcraftandroid.procraft.core.PluginControl.Slider)?.control?.takeIf { c -> c.key.endsWith("near") } }
+        if (near == null) {
+            message = "Turn on the Tweening plugin first."
+            return
+        }
+        val was = near.value
+        viewModelScope.launch {
+            var from = layer.id
+            var made = 0
+            for (k in 1..count) {
+                plugins.setSlider(near.key, 1f / (count + 2 - k))
+                val next = withContext(Dispatchers.Default) { s.addInbetween(from) } ?: break
+                from = next
+                made++
+            }
+            plugins.setSlider(near.key, was)
+            if (made == 0) message = "An in-between goes between two frames of one layer each, with something drawn." else layerChange { }
+        }
+    }
+
+"""
+    vm = vm.replace(doc, funcs + doc, 1)
+    more = row + (
+        '            RowLine()\n'
+        '            Row(Modifier.fillMaxWidth().height(44.dp).padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n'
+        '                Text("Auto In-betweens", color = Pc.PanelTitle, fontSize = 17.sp, modifier = Modifier.weight(1f).clickable { vm.addAutoInbetweens() })\n'
+        '                Text("\\u2212", color = Pc.PanelTitle, fontSize = 22.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(36.dp).clickable { vm.autoInbetweens = (vm.autoInbetweens - 1).coerceAtLeast(1) })\n'
+        '                Text("${vm.autoInbetweens}", color = Pc.PanelTitle, fontSize = 17.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(22.dp))\n'
+        '                Text("+", color = Pc.PanelTitle, fontSize = 22.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(36.dp).clickable { vm.autoInbetweens = (vm.autoInbetweens + 1).coerceAtMost(8) })\n'
+        '            }\n')
+    ui = ui.replace(row, more, 1)
+    write(vm_path, vm); write(ui_path, ui)
+    print("Auto in-betweens added")
+
+auto_inbetweens()
+
 for w in warn: print("WARNING:", w)
 print("done")
 sys.exit(0)
