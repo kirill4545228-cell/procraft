@@ -292,11 +292,180 @@ def branding_and_language():
         "                    color = Pc.GalleryText, fontSize = 16.sp, fontWeight = FontWeight.Bold,\n"
         "                )\n"
         "            }\n"
+        "            NewYearButton()\n"
         "            Row(\n")
     write(gp, g.replace(anchor, button, 1))
     print("Branding and language button added")
 
 branding_and_language()
+
+# 9. New Year: a garland and a little snow drawn over the gallery (touches go through them), and a
+#    snowflake button beside RU / EN that switches them. Five quick taps on it show a surprise.
+def new_year():
+    shutil.copy(f"{HERE}/NewYear.kt", f"{PKG}/ui/NewYear.kt")
+    gp = f"{PKG}/ui/GalleryScreen.kt"
+    if not os.path.exists(gp):
+        warn.append("New Year: GalleryScreen.kt not found"); return
+    g = read(gp)
+    old = "BoxWithConstraints(Modifier.fillMaxSize().background(Pc.GalleryBackground)) {"
+    if old not in g:
+        warn.append("New Year: the gallery looks different, the garland is not drawn"); return
+    write(gp, g.replace(old, "BoxWithConstraints(Modifier.fillMaxSize().background(Pc.GalleryBackground).newYear()) {", 1))
+    print("New Year added")
+
+new_year()
+
+# 10. The app icon, made from ru/icon.png at every size the icon needs (needs Pillow).
+def app_icon():
+    src = f"{HERE}/icon.png"
+    if not os.path.exists(src):
+        warn.append("icon.png not found: the icon is not changed"); return
+    try:
+        from PIL import Image
+    except ImportError:
+        warn.append("Pillow is missing: the icon is not changed"); return
+    im = Image.open(src).convert("RGB")
+    bg = im.getpixel((4, 4))
+    for density, px in {"mdpi": 108, "hdpi": 162, "xhdpi": 216, "xxhdpi": 324, "xxxhdpi": 432}.items():
+        folder = f"{MAIN}/res/drawable-{density}"
+        if not os.path.isdir(folder):
+            continue
+        side = int(px * 0.52)
+        art = im.resize((side, side), Image.LANCZOS)
+        pos = ((px - side) // 2, (px - side) // 2)
+        fg = Image.new("RGB", (px, px), bg)
+        fg.paste(art, pos)
+        fg.save(f"{folder}/ic_launcher_foreground.png")
+        # the one-colour icon some launchers use: the bright parts of the picture
+        alpha = art.convert("L").point(lambda v: 0 if v < 70 else min(255, (v - 70) * 4))
+        mono = Image.new("RGBA", (px, px), (0, 0, 0, 0))
+        mono.paste(Image.new("RGBA", (side, side), (255, 255, 255, 255)), pos, alpha)
+        mono.save(f"{folder}/ic_launcher_monochrome.png")
+    print("Icon replaced")
+
+app_icon()
+
+# 11. Take a layer to another artwork: hold a layer (until it can be dragged) and touch the screen with
+#     a second finger; the layer goes in hand (the app's clipboard), and a plate offers "Paste here"
+#     in whichever artwork is opened next. Copy Layer and Copy Canvas put theirs in hand too.
+def carry():
+    shutil.copy(f"{HERE}/Carry.kt", f"{PKG}/ui/Carry.kt")
+    vm_path = f"{PKG}/canvas/CanvasViewModel.kt"
+    lp_path = f"{PKG}/ui/LayersPanel.kt"
+    ma_path = f"{PKG}/MainActivity.kt"
+    if not all(os.path.exists(p) for p in (vm_path, lp_path, ma_path)):
+        warn.append("Carry: files not found"); return
+    vm, lp, ma = read(vm_path), read(lp_path), read(ma_path)
+    copy_layer = "    fun copyLayer() {\n"
+    layer_note = '        if (copied != null) showNotice("Layer copied")\n'
+    canvas_note = '            if (copied != null) showNotice("Canvas copied")\n'
+    paste_head = "    fun paste(private: Boolean = false) {\n        val image = clipboard ?: return\n"
+    drag_start = "                                    dragId = l.id\n                                    dragOffset = 0f\n                                    dragUnit = vm.movingWith(l) + l.id\n"
+    drag_end = "                                onDragEnd = {\n                                    rows[l.id]?.let { drop(vm, l, it.center.y + dragOffset, rows) }\n"
+    drag_cancel = "                                onDragCancel = {\n                                    dragId = null\n                                    dragOffset = 0f\n                                    dragUnit = emptySet()\n                                    pinned[0]?.release()\n"
+    touch_head = "    override fun dispatchTouchEvent(e: android.view.MotionEvent): Boolean {\n"
+    app_call = ") { AppRoot(model) }"
+    checks = [(vm, copy_layer), (vm, layer_note), (vm, canvas_note), (vm, paste_head),
+              (lp, drag_start), (lp, drag_end), (lp, drag_cancel), (ma, touch_head), (ma, app_call)]
+    if any(text.count(anchor) != 1 for text, anchor in checks) or "var carrying" in vm:
+        warn.append("Carry: the code looks different, the gesture is not added"); return
+    funcs = (
+        "    /** A layer (or the canvas) taken along to paste into another artwork: the plate over the app. */\n"
+        "    var carrying by mutableStateOf(false)\n\n"
+        "    /** The layer held down goes in hand: it is in the clipboard until it is pasted somewhere. */\n"
+        "    fun carryLayer(l: LayerInfo) {\n"
+        "        copyLayerContents(l)\n"
+        "        carrying = canPaste\n"
+        '        if (carrying) showNotice("Layer in hand")\n'
+        "    }\n\n"
+        "    fun endCarry() {\n"
+        "        carrying = false\n"
+        "    }\n\n")
+    vm = vm.replace(copy_layer, funcs + copy_layer, 1)
+    vm = vm.replace(layer_note, layer_note + "        if (copied != null) carrying = true\n", 1)
+    vm = vm.replace(canvas_note, canvas_note + "            if (copied != null) carrying = true\n", 1)
+    vm = vm.replace(paste_head, paste_head + "        carrying = false\n", 1)
+    lp = lp.replace(drag_start, drag_start + "                                    LayerCarry.hold { vm.carryLayer(l) }\n", 1)
+    lp = lp.replace(drag_end, "                                onDragEnd = {\n                                    LayerCarry.release()\n" + drag_end.split("\n", 1)[1], 1)
+    lp = lp.replace(drag_cancel, "                                onDragCancel = {\n                                    LayerCarry.release()\n" + drag_cancel.split("\n", 1)[1], 1)
+    touch = (touch_head +
+             "        when (e.actionMasked) {\n"
+             "            android.view.MotionEvent.ACTION_POINTER_DOWN -> io.github.artcraftandroid.procraft.ui.LayerCarry.secondFinger()\n"
+             "            android.view.MotionEvent.ACTION_DOWN, android.view.MotionEvent.ACTION_UP, android.view.MotionEvent.ACTION_CANCEL -> io.github.artcraftandroid.procraft.ui.LayerCarry.release()\n"
+             "        }\n")
+    ma = ma.replace(touch_head, touch, 1)
+    ma = ma.replace(app_call, ") { io.github.artcraftandroid.procraft.ui.AppWithCarry(model) }", 1)
+    write(vm_path, vm); write(lp_path, lp); write(ma_path, ma)
+    print("Carry added")
+
+carry()
+
+# 12. Auto In-betweens: with the Tweening plugin on, one tap draws several evenly spaced frames between
+#     a frame and the next (the plugin's In-between, called one after another with the slider set so
+#     the frames fall at 1/(n+1), 2/(n+1) ... of the way). The frames need one layer each.
+def auto_inbetweens():
+    vm_path = f"{PKG}/canvas/CanvasViewModel.kt"
+    ui_path = f"{PKG}/ui/AnimationUi.kt"
+    if not (os.path.exists(vm_path) and os.path.exists(ui_path)):
+        warn.append("Auto in-betweens: files not found"); return
+    vm, ui = read(vm_path), read(ui_path)
+    doc = "    /** A plugin's In-between: a frame drawn between this frame and the next by the plugin (off the main thread: it takes a moment), made current. */\n"
+    row = ('            Row(Modifier.fillMaxWidth().height(44.dp).clickable { vm.addInbetween() }.padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n'
+           '                Text("In-between", color = Pc.PanelTitle, fontSize = 17.sp)\n'
+           '            }\n')
+    if not (doc in vm and row in ui and "autoInbetweens" not in vm and "val pluginList" not in "" and "pluginList" in vm):
+        warn.append("Auto in-betweens: the code looks different, nothing added"); return
+    funcs = """    /** How many frames Auto In-betweens draws between a frame and the next. */
+    var autoInbetweens by androidx.compose.runtime.mutableIntStateOf(3)
+
+    /**
+     * Auto In-betweens: [autoInbetweens] frames between this frame and the next, evenly spaced. The
+     * Tweening plugin draws each (its "Nearer the next frame" slider set to what the spacing needs,
+     * then put back), one after another, each between the last one made and the next frame.
+     */
+    fun addAutoInbetweens() {
+        frameOptionsOpen = false
+        stopPlaying()
+        val layer = currentFrameLayer() ?: return
+        val s = session ?: return
+        val count = autoInbetweens.coerceIn(1, 8)
+        val near = pluginList.firstOrNull { it.id == "io.github.artcraftandroid.tweening" && it.on }
+            ?.controls
+            ?.firstNotNullOfOrNull { (it as? io.github.artcraftandroid.procraft.core.PluginControl.Slider)?.control?.takeIf { c -> c.key.endsWith("near") } }
+        if (near == null) {
+            message = "Turn on the Tweening plugin first."
+            return
+        }
+        val was = near.value
+        viewModelScope.launch {
+            var from = layer.id
+            var made = 0
+            for (k in 1..count) {
+                plugins.setSlider(near.key, 1f / (count + 2 - k))
+                val next = withContext(Dispatchers.Default) { s.addInbetween(from) } ?: break
+                from = next
+                made++
+            }
+            plugins.setSlider(near.key, was)
+            if (made == 0) message = "An in-between goes between two frames of one layer each, with something drawn." else layerChange { }
+        }
+    }
+
+"""
+    vm = vm.replace(doc, funcs + doc, 1)
+    more = row + (
+        '            RowLine()\n'
+        '            Row(Modifier.fillMaxWidth().height(44.dp).padding(start = 16.dp), verticalAlignment = Alignment.CenterVertically) {\n'
+        '                Text("Auto In-betweens", color = Pc.PanelTitle, fontSize = 17.sp, modifier = Modifier.weight(1f).clickable { vm.addAutoInbetweens() })\n'
+        '                Text("\\u2212", color = Pc.PanelTitle, fontSize = 22.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(36.dp).clickable { vm.autoInbetweens = (vm.autoInbetweens - 1).coerceAtLeast(1) })\n'
+        '                Text("${vm.autoInbetweens}", color = Pc.PanelTitle, fontSize = 17.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(22.dp))\n'
+        '                Text("+", color = Pc.PanelTitle, fontSize = 22.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.width(36.dp).clickable { vm.autoInbetweens = (vm.autoInbetweens + 1).coerceAtMost(8) })\n'
+        '            }\n')
+    ui = ui.replace(row, more, 1)
+    write(vm_path, vm); write(ui_path, ui)
+    print("Auto in-betweens added")
+
+auto_inbetweens()
 
 for w in warn: print("WARNING:", w)
 print("done")
